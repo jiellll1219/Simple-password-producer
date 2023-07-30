@@ -12,7 +12,7 @@ def show_password():
     seed_account = entry.get()
     password = generate_password(seed_account)
     password_label.config(text=f"Generated Password: {password}")
-    pyperclip.copy(password)  # 将生成的密码复制到剪贴板
+    pyperclip.copy(password)
 
 def go_back():
     password_label.config(text="")

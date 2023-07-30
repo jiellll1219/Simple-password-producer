@@ -5,7 +5,7 @@ import pyperclip
 
 def generate_password(seed, password_length):
     characters = string.ascii_letters + string.digits + string.punctuation
-    random.seed(seed)  # 设置随机数生成器的种子
+    random.seed(seed)
     password = ''.join(random.choice(characters) for _ in range(password_length))
     return password
 
@@ -20,7 +20,7 @@ def show_password():
 
     password = generate_password(seed, password_length)
     password_label.config(text=f"Generated Password: {password}")
-    pyperclip.copy(password)  # 将生成的密码复制到剪贴板
+    pyperclip.copy(password)
 
 def go_back():
     password_label.config(text="")
